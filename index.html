@@ -10,7 +10,7 @@
   <title>todo list con Vue</title>
 </head>
 <body>
-  <div class="container">
+  <div class="container" id="list">
     <!-- Area dove inseriamo i dati -->
     <div class="input-dati">
       <h1>Lista delle cose da fare.</h1>
@@ -21,7 +21,7 @@
     <!-- Lista degli elementi -->
     <div class="lista">
       <ul>
-        <li class="elemento-lista">Primo
+        <li class="elemento-lista" v-for:"impegno in impegni">{{ impegno }}
           <i class="fas fa-times"></i>
         </li>
       </ul>
