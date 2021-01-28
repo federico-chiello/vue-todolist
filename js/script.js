@@ -16,8 +16,9 @@ var app = new Vue({
     ripristinaImpegno(index){
       this.impegni.push(this.impegniEliminati[index]);
       this.impegniEliminati.splice(index, 1);
+    },
+    cancellaImpegno(index){
+      this.impegniEliminati.splice(index, 1);
     }
-
   }
-
 });

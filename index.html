@@ -33,7 +33,7 @@
     <div class="lista">
       <ul v-if="impegniEliminati.length > 0">
         <li class="elemento-lista" v-for="(impegno, index) in impegniEliminati"> {{ index + 1 + ') ' + impegno }}
-          <i class="fas fa-times"></i>
+          <i class="fas fa-times" @click="cancellaImpegno(index)"></i>
           <i class="fas fa-trash-restore" @click="ripristinaImpegno(index)"></i>
         </li>
       </ul>
