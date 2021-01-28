@@ -13,7 +13,11 @@ var app = new Vue({
       var primaLettera = this.nuovoImpegno.charAt(0).toUpperCase();
       var restoParola = this.nuovoImpegno.substring(1).toLowerCase();
       this.nuovoImpegno = primaLettera + restoParola;
-      this.impegni.push(this.nuovoImpegno);
+      if (this.nuovoImpegno.length > 4) {
+        this.impegni.push(this.nuovoImpegno);
+      } else {
+        alert('Hai inserito una parola troppo corta. La lunghezza deve superare i 4 caratteri.');
+      }
       this.nuovoImpegno = '';
     },
     eliminaImpegno (index){
