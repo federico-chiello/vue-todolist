@@ -21,8 +21,8 @@
     <!-- Lista degli elementi -->
     <div class="lista">
       <ul>
-        <li class="elemento-lista" v-for:"impegno in impegni">{{ impegno }}
-          <i class="fas fa-times"></i>
+        <li class="elemento-lista" v-for="(impegno, index) in impegni">{{ impegno }}
+          <i class="fas fa-times" @click="eliminaImpegno(index)"></i>
         </li>
       </ul>
     </div>
