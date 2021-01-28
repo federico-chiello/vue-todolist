@@ -10,8 +10,10 @@ var app = new Vue({
   },
   methods: {
     aggiungiImpegno(){
-      this.impegni.push(this.nuovoImpegno//.charAt(0).toUpperCase().substring(1).toLowerCase()
-      );
+      var primaLettera = this.nuovoImpegno.charAt(0).toUpperCase();
+      var restoParola = this.nuovoImpegno.substring(1).toLowerCase();
+      this.nuovoImpegno = primaLettera + restoParola;
+      this.impegni.push(this.nuovoImpegno);
       this.nuovoImpegno = '';
     },
     eliminaImpegno (index){
