@@ -11,6 +11,7 @@
   margin: 0 auto;
 }
 
+/* <!-- Area dove inseriamo i dati --> */
 .input-dati {
   text-align: center;
 }
@@ -23,17 +24,44 @@
   padding: 20px 0;
 }
 
+.input-dati input{
+  padding: 10px 15px;
+  width: 280px;
+}
+
+.input-dati button{
+  padding: 10px;
+}
+
 .input-dati input,
 .input-dati button {
-  padding: 5px;
   border-radius: 20px;
   outline: none;
 }
 
+/* <!-- Lista degli elementi --> */
 .lista {
-  height: 100px;
+  /* height: 100px; */
   width: 70%;
   margin: 20px auto;
-  background-color: lightgrey;
+  background-color: grey;
+}
 
+.lista ul{
+  list-style: none;
+}
+
+.lista li:hover,
+.lista li:focus {
+  background-color: lightgrey;
+}
+
+.lista li i {
+  float: right;
+  padding-right: 10px;
+}
+
+.lista ul li.elemento-lista {
+  padding: 8px;
+  border-bottom: 1px solid black;
 }

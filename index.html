@@ -11,19 +11,35 @@
 </head>
 <body>
   <div class="container">
+    <!-- Area dove inseriamo i dati -->
     <div class="input-dati">
       <h1>Lista delle cose da fare.</h1>
       <input type="text" name="text" placeholder="Inserisci il teso">
       <button type="button" name="button">Aggiungi</button>
     </div>
+    <!-- / area dove inseriamo i dati -->
+    <!-- Lista degli elementi -->
     <div class="lista">
-
+      <ul>
+        <li class="elemento-lista">Primo
+          <i class="fas fa-times"></i>
+        </li>
+      </ul>
     </div>
-    <div class="lista-eliminata">
-      <h3>Lista eliminata</h3>
-
+    <!-- / lista degli elementi -->
+    <!-- Lista degli elementi eliminati -->
+    <h2>Lista degli elementi eliminati <i class="fas fa-trash"></i></h2>
+    <div class="lista">
+      <ul>
+        <li class="elemento-lista">Primo
+          <i class="fas fa-times"></i>
+          <i class="fas fa-clone"></i>
+        </li>
+        <li class="elemento-lista">Secondo</li>
+        <li class="elemento-lista">Terzo</li>
+      </ul>
     </div>
-
+    <!-- / lista degli elementi eliminati -->
 
   </div>
   <script src="js/script.js" charset="utf-8"></script>
