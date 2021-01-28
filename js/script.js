@@ -4,12 +4,16 @@
 var app = new Vue({
   el: '#list',
   data: {
-    impegni: ['Andare al lavoro','Fare la spesa', 'Andare in piscina', 'Comprare nuovi vestiti', 'Guardarsi un film']
+    impegni: ['Andare al lavoro','Fare la spesa', 'Andare in piscina', 'Comprare nuovi vestiti', 'Guardarsi un film'],
+    impegniEliminati: []
   },
   methods: {
     eliminaImpegno (index){
+      this.impegniEliminati.push(this.impegni[index]);
+      // console.log(this.impegniEliminati);
       this.impegni.splice(index, 1);
     }
+
   }
 
 });

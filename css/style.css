@@ -45,6 +45,7 @@
   width: 70%;
   margin: 20px auto;
   background-color: grey;
+  border-radius: 20px;
 }
 
 .lista ul{
@@ -64,4 +65,12 @@
 .lista ul li.elemento-lista {
   padding: 8px;
   border-bottom: 1px solid black;
+}
+
+.lista ul li.elemento-lista:last-child {
+  border-bottom: none;
+}
+
+.lista h2 {
+  padding: 20px;
 }

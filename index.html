@@ -20,23 +20,22 @@
     <!-- / area dove inseriamo i dati -->
     <!-- Lista degli elementi -->
     <div class="lista">
-      <ul>
-        <li class="elemento-lista" v-for="(impegno, index) in impegni">{{ impegno }}
+      <ul v-if="impegni.length > 0">
+        <li class="elemento-lista" v-for="(impegno, index) in impegni">{{ index + 1 + ') ' + impegno }}
           <i class="fas fa-times" @click="eliminaImpegno(index)"></i>
         </li>
       </ul>
+      <h2 v-else>La lista è vuota</h2>
     </div>
     <!-- / lista degli elementi -->
     <!-- Lista degli elementi eliminati -->
     <h2>Lista degli elementi eliminati <i class="fas fa-trash"></i></h2>
     <div class="lista">
       <ul>
-        <li class="elemento-lista">Primo
+        <li class="elemento-lista" v-for="(impegno, index) in impegniEliminati"> {{ index + 1 + ') ' + impegno }}
           <i class="fas fa-times"></i>
           <i class="fas fa-clone"></i>
         </li>
-        <li class="elemento-lista">Secondo</li>
-        <li class="elemento-lista">Terzo</li>
       </ul>
     </div>
     <!-- / lista degli elementi eliminati -->
