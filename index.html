@@ -29,7 +29,7 @@
     </div>
     <!-- / lista degli elementi -->
     <!-- Lista degli elementi eliminati -->
-    <h2>Lista degli elementi eliminati <i class="fas fa-trash"></i></h2>
+    <h2>Lista degli elementi eliminati <i class="fas fa-trash" @click="cancellaTutto()"></i></h2>
     <div class="lista">
       <ul v-if="impegniEliminati.length > 0">
         <li class="elemento-lista" v-for="(impegno, index) in impegniEliminati"> {{ index + 1 + ') ' + impegno }}

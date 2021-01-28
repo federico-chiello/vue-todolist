@@ -19,6 +19,9 @@ var app = new Vue({
     },
     cancellaImpegno(index){
       this.impegniEliminati.splice(index, 1);
+    },
+    cancellaTutto(){
+      this.impegniEliminati.splice(0);
     }
   }
 });
