@@ -5,9 +5,15 @@ var app = new Vue({
   el: '#list',
   data: {
     impegni: ['Andare al lavoro','Fare la spesa', 'Andare in piscina', 'Comprare nuovi vestiti', 'Guardarsi un film'],
-    impegniEliminati: []
+    impegniEliminati: [],
+    nuovoImpegno: ''
   },
   methods: {
+    aggiungiImpegno(){
+      this.impegni.push(this.nuovoImpegno//.charAt(0).toUpperCase().substring(1).toLowerCase()
+      );
+      this.nuovoImpegno = '';
+    },
     eliminaImpegno (index){
       this.impegniEliminati.push(this.impegni[index]);
       // console.log(this.impegniEliminati);

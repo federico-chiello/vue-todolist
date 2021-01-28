@@ -14,8 +14,8 @@
     <!-- Area dove inseriamo i dati -->
     <div class="input-dati">
       <h1>Lista delle cose da fare.</h1>
-      <input type="text" name="text" placeholder="Inserisci il teso">
-      <button type="button" name="button">Aggiungi</button>
+      <input type="text" name="text" placeholder="Inserisci il teso" @keyup.enter="aggiungiImpegno" v-model="nuovoImpegno">
+      <button type="button" name="button" @click="aggiungiImpegno">Aggiungi</button>
     </div>
     <!-- / area dove inseriamo i dati -->
     <!-- Lista degli elementi -->
