@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  width: 80%;
+  background-color: lightblue;
+  margin: 0 auto;
+}
+
+.input-dati {
+  text-align: center;
+}
+
+.input-dati h1 {
+  text-transform: uppercase;
+  font-size: 200%;
+  color: rgb(152, 29, 21);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.input-dati input,
+.input-dati button {
+  padding: 5px;
+  border-radius: 20px;
+  outline: none;
+}
+
+.lista {
+  height: 100px;
+  width: 70%;
+  margin: 20px auto;
+  background-color: lightgrey;
+
+}
