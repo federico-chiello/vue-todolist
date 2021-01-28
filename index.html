@@ -31,12 +31,13 @@
     <!-- Lista degli elementi eliminati -->
     <h2>Lista degli elementi eliminati <i class="fas fa-trash"></i></h2>
     <div class="lista">
-      <ul>
+      <ul v-if="impegniEliminati.length > 0">
         <li class="elemento-lista" v-for="(impegno, index) in impegniEliminati"> {{ index + 1 + ') ' + impegno }}
           <i class="fas fa-times"></i>
-          <i class="fas fa-clone"></i>
+          <i class="fas fa-trash-restore" @click="ripristinaImpegno(index)"></i>
         </li>
       </ul>
+      <h3 v-else>Nessun elemento eliminato</h3>
     </div>
     <!-- / lista degli elementi eliminati -->
 

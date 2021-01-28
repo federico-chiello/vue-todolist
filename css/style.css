@@ -44,8 +44,9 @@
   /* height: 100px; */
   width: 70%;
   margin: 20px auto;
-  background-color: grey;
+  background-color: lightgrey;
   border-radius: 20px;
+  padding: 10px;
 }
 
 .lista ul{
@@ -54,7 +55,7 @@
 
 .lista li:hover,
 .lista li:focus {
-  background-color: lightgrey;
+  background-color: white;
 }
 
 .lista li i {
