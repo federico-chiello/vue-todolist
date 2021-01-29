@@ -9,6 +9,7 @@ var app = new Vue({
     nuovoImpegno: ''
   },
   methods: {
+    //  Area dove inseriamo i dati
     aggiungiImpegno(){
       var primaLettera = this.nuovoImpegno.charAt(0).toUpperCase();
       var restoParola = this.nuovoImpegno.substring(1).toLowerCase();
@@ -20,18 +21,24 @@ var app = new Vue({
       }
       this.nuovoImpegno = '';
     },
-    eliminaImpegno (index){
+    // Lista degli elementi
+    cestinaImpegno (index){
       this.impegniEliminati.push(this.impegni[index]);
       // console.log(this.impegniEliminati);
       this.impegni.splice(index, 1);
     },
      cestinaTutto(){
       this.impegniEliminati.push(...this.impegni);
-      this.impegni.splice(0);
+      this.impegni = [];
     },
+    // Lista degli elementi eliminati
     ripristinaImpegno(index){
       this.impegni.push(this.impegniEliminati[index]);
       this.impegniEliminati.splice(index, 1);
+    },
+    ripristinaTutto(){
+      this.impegni.push(...this.impegniEliminati);
+      this.impegniEliminati = [];
     },
     cancellaImpegno(index){
       this.impegniEliminati.splice(index, 1);

@@ -75,6 +75,7 @@ button {
 
 .tasto button {
   float: right;
+  padding: 5px;
   margin-right: 170px;
 }
 

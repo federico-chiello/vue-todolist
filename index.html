@@ -22,7 +22,7 @@
     <div class="lista">
       <ul v-if="impegni.length > 0">
         <li class="elemento-lista" v-for="(impegno, index) in impegni">{{ index + 1 + ') ' + impegno }}
-          <i class="fas fa-times" @click="eliminaImpegno(index)"></i>
+          <i class="fas fa-times" @click="cestinaImpegno(index)"></i>
         </li>
       </ul>
       <h2 v-else>La lista è vuota</h2>
@@ -43,6 +43,9 @@
         </li>
       </ul>
       <h3 v-else>Nessun elemento eliminato</h3>
+    </div>
+    <div class="tasto">
+      <button type="button" name="button" @click="ripristinaTutto">Ripristina tutto</button>
     </div>
     <!-- / lista degli elementi eliminati -->
 
