@@ -23,6 +23,7 @@
       <ul v-if="impegni.length > 0">
         <li class="elemento-lista" v-for="(impegno, index) in impegni">{{ index + 1 + ') ' + impegno }}
           <i class="fas fa-times" @click="cestinaImpegno(index)"></i>
+          <i class="fas fa-exchange-alt" @click="modificaImpegno(index)"></i>
         </li>
       </ul>
       <h2 v-else>La lista è vuota</h2>

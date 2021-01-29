@@ -6,7 +6,8 @@ var app = new Vue({
   data: {
     impegni: ['Andare al lavoro','Fare la spesa', 'Andare in piscina', 'Comprare nuovi vestiti', 'Guardarsi un film'],
     impegniEliminati: [],
-    nuovoImpegno: ''
+    nuovoImpegno: '',
+    cambia: ''
   },
   methods: {
     //  Area dove inseriamo i dati
@@ -22,6 +23,13 @@ var app = new Vue({
       this.nuovoImpegno = '';
     },
     // Lista degli elementi
+    modificaImpegno(index){
+      this.cambia = prompt('Modifica ciò che hai inserito.', this.impegni[index]);
+      var primaLettera = this.cambia.charAt(0).toUpperCase();
+      var restoParola = this.cambia.substring(1).toLowerCase();
+      this.cambia = primaLettera + restoParola;
+      this.impegni.splice(index, 1, this.cambia);
+    },
     cestinaImpegno (index){
       this.impegniEliminati.push(this.impegni[index]);
       // console.log(this.impegniEliminati);
