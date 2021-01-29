@@ -34,7 +34,8 @@
 }
 
 .input-dati input,
-.input-dati button {
+.input-dati button,
+button {
   border-radius: 20px;
   outline: none;
 }
@@ -72,6 +73,12 @@
   border-bottom: none;
 }
 
-.lista h2 {
-  padding: 20px;
+.tasto button {
+  float: right;
+  margin-right: 170px;
+}
+
+.elementi-eliminati {
+  padding: 30px;
+
 }

@@ -27,9 +27,14 @@
       </ul>
       <h2 v-else>La lista è vuota</h2>
     </div>
+    <div class="tasto">
+      <button type="button" name="button" @click="eliminaTutto(index)">Elimina tutto</button>
+    </div>
     <!-- / lista degli elementi -->
     <!-- Lista degli elementi eliminati -->
-    <h2>Lista degli elementi eliminati <i class="fas fa-trash" @click="cancellaTutto()"></i></h2>
+    <div class="elementi-eliminati">
+      <h2>Lista degli elementi eliminati <i class="fas fa-trash" @click="cancellaTutto()"></i></h2>
+    </div>
     <div class="lista">
       <ul v-if="impegniEliminati.length > 0">
         <li class="elemento-lista" v-for="(impegno, index) in impegniEliminati"> {{ index + 1 + ') ' + impegno }}

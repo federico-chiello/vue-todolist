@@ -25,6 +25,10 @@ var app = new Vue({
       // console.log(this.impegniEliminati);
       this.impegni.splice(index, 1);
     },
+    eliminaTutto(index){
+      this.impegniEliminati.push(this.impegni[index]);
+      this.impegni.splice(index, 0);
+    },
     ripristinaImpegno(index){
       this.impegni.push(this.impegniEliminati[index]);
       this.impegniEliminati.splice(index, 1);
@@ -37,3 +41,12 @@ var app = new Vue({
     }
   }
 });
+
+// Implementazioni
+// (1) inserire il nuovo todo;
+// (2) modificare un todo;
+// (3) spostare il todo nel cestino;
+// (4) pulsante per spostare tutti i todo nel cestino;
+// (5) ripristinare dal cestino un todo;
+// (6) eliminare definitivamente un todo dal cestino;
+// (7) pulsante per eliminare tutti i todo del cestino.
