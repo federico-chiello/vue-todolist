@@ -25,9 +25,9 @@ var app = new Vue({
       // console.log(this.impegniEliminati);
       this.impegni.splice(index, 1);
     },
-    eliminaTutto(index){
-      this.impegniEliminati.push(this.impegni[index]);
-      this.impegni.splice(index, 0);
+     cestinaTutto(){
+      this.impegniEliminati.push(...this.impegni);
+      this.impegni.splice(0);
     },
     ripristinaImpegno(index){
       this.impegni.push(this.impegniEliminati[index]);
